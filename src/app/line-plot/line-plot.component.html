@@ -2,9 +2,10 @@
   <canvas id="MyChart" >{{ chart }}</canvas>
 </div>
 <div class="form" ngForm>
+  <label for="temp">Enter temperature for next day to see prediction of AAPPL stock price</label>
   <input type="text"
-         id="name"
-         name="name"
+         id="temp"
+         name="temp"
          [(ngModel)]="predictionData.temperature"
          placeholder="Temperature for next day prediction" required #temp="ngModel">
   @if (temp.touched && temp.invalid && temp.errors?.['required']) {

@@ -73,11 +73,10 @@ export class LinePlotComponent implements OnInit {
 
   private updateChart(prediction$: Observable<PlotData>) {
     prediction$.pipe(first()).subscribe((prediction) => {
-      this.chart?.data.datasets[0].data.push(prediction.stockPrice);
-      this.chart?.data.datasets[1].data.push(prediction.temperature);
-      this.chart?.data?.labels?.push(prediction.timestamp);
-      this.chart?.update();
-      console.log(prediction);
+      this.chart.data.datasets[0].data.push(prediction.stockPrice);
+      this.chart.data.datasets[1].data.push(prediction.temperature);
+      this.chart.data.labels.push(prediction.timestamp);
+      this.chart.update();
     })
   }
 
