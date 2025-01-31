@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
-import { LinePlotComponent } from './line-plot/line-plot.component';
+import {Component} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [LinePlotComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

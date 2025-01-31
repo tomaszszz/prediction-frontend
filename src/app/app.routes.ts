@@ -4,7 +4,7 @@ import {plotResolver} from './resolvers/plot.resolver';
 export const routes: Routes = [
   { path: '', redirectTo: 'plot', pathMatch: 'full' },
   { path: 'plot',
-    resolve: { some: plotResolver },
+    resolve: { plotData: plotResolver },
     loadComponent: () => import('./line-plot/line-plot.component').then(m => m.LinePlotComponent),
     data: { data: 'plot' }
   }
